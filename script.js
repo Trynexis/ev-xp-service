@@ -14,8 +14,6 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
     alert("Please fill out all required fields.");
     return;
   }
-
-  // Show the submitted message instantly
   document.getElementById('successMessage').style.display = 'block';
 
   const payload = {
