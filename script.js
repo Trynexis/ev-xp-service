@@ -15,6 +15,9 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
     return;
   }
 
+  // Show the submitted message instantly
+  document.getElementById('successMessage').style.display = 'block';
+
   const payload = {
     username: "Order manager",
     embeds: [
@@ -46,10 +49,7 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
     body: JSON.stringify(payload)
   })
     .then(async res => {
-      if (res.ok) {
-        console.log("Form submitted");
-        document.getElementById('successMessage').style.display = 'block';
-      } else {
+      if (!res.ok) {
         const errorData = await res.json();
         console.error("Discord API error:", errorData);
         alert("Form failed to send. See console for details.");
