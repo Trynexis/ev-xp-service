@@ -16,7 +16,7 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
   }
 
   const payload = {
-    username: "Trynexis",
+    username: "Order manager",
     embeds: [
       {
         title: "📬 New PokeMMO Service Request",
