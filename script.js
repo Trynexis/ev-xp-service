@@ -8,7 +8,7 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
   const evolve = document.getElementById('evolve').value.trim();
   const ev = document.getElementById('ev').value.trim();
   const IGN = document.getElementById('IGN').value.trim();
-  const extra = document.getElementById('extra').value.trim(); // optional
+  const extra = document.getElementById('extra').value.trim();
 
   if (!mon || !levelno || !evolve || !ev || !IGN) {
     alert("Please fill out all required fields.");
@@ -47,16 +47,16 @@ document.getElementById('Pokeform').addEventListener('submit', function (e) {
   })
     .then(async res => {
       if (res.ok) {
-        console.log("✅ Form submitted!");
+        console.log("Form submitted");
         document.getElementById('successMessage').style.display = 'block';
       } else {
         const errorData = await res.json();
-        console.error("❌ Discord API error:", errorData);
+        console.error("Discord API error:", errorData);
         alert("Form failed to send. See console for details.");
       }
     })
     .catch(err => {
-      console.error("❌ Network error:", err);
+      console.error("Network error:", err);
       alert("Network error occurred.");
     });
 });
