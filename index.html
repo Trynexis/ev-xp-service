@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV & XP Services</title>
+</head>
+<body>
+    <h1>Trynexis' EV & XP Services</h1>
+    <img src="/EXP&EV.png" alt="XP & EV Chart" width="300px">
+    <br><br>
+    <form id="Pokeform" autocomplete="off">
+        <label for="mon">Which Pokémon do you want leveled?</label><br>
+        <input type="text" id="mon" required placeholder="Eg. Breloom, Chimchar, etc."><br>
+        <label for="levelno">Which level should I raise it to?</label><br>
+        <input type="levelno" id="levelno" required placeholder="1-100, 1-50, 50-100"><br>
+        <label for="evolve">Do you want to evolve it? (+5k)</label><br>
+        <select id="evolve" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+        <label for="ev">Do you want to EV train it? (+10k)</label><br>
+        <textarea style="resize: none;" id="ev" rows="6" placeholder="HP                  Atk                       Def                 Sp.Atk                        Sp.Def            Speed"></textarea><br>
+        <label for="IGN">What is your IGN?</label><br>
+        <input type="text" id="IGN" required placeholder="Your in-game name"><br>
+        <label for="extra">Do you have anything extra do write?</label><br>
+        <input type="text" id="extra" placeholder="Write it here."><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage" style="color: green; display: none;">✅ The form has been sent successfully!</div>
+    <script src="script.js"></script>
+</body>
+</html>
